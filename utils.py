@@ -175,4 +175,8 @@ def face_detection_model(model_type, model_path):
     elif model_type == 'dlib':
         from dlibdetect import FaceDetectorDlib
         return FaceDetectorDlib(model_path)
+    elif model_type == 'dlib_opt':
+        from dlibdetect import FaceDetectorDlibOpt
+        return FaceDetectorDlibOpt(model_path)
     return ObjectDetectorCascadeOpenCV(model_path)
+
